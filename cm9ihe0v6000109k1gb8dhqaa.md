@@ -79,6 +79,102 @@ graph TD
     end
 ```
 
+## 🧵 Adding `br-ex` to a MAAS-Managed Machine
+
+In our previous discussions, we've set up the foundational network components for our OpenStack deployment.
+
+However, a crucial element that enables external network access for instances is the `br-ex` bridge. Let's delve into how to configure this bridge on a machine managed by MAAS.
+
+### Why `br-ex` Matters
+
+The `br-ex` bridge serves as the gateway between your OpenStack environment and the external network. It's essential for facilitating floating IPs and ensuring that instances can communicate outside the private cloud.
+
+### Configuring `br-ex` via the MAAS UI
+
+1. **Navigate to the Machine's Network Interfaces:**
+    
+    * In the MAAS web interface, go to the **Machines** tab.
+        
+    * Select the machine you wish to configure.
+        
+    * Click on the **Network** tab to view its interfaces.
+        
+2. **Create the Open vSwitch Bridge:**
+    
+    * Identify the physical interface connected to your external network (e.g., `enp1s0`).
+        
+    * Click the checkbox next to this interface.
+        
+    * From the actions dropdown, select **Create bridge**.
+        
+    * In the dialog that appears:
+        
+        * Set the **Bridge name** to `br-ex`.
+            
+        * Choose **Open vSwitch** as the bridge type.
+            
+        * Ensure the selected interface is added to the bridge.
+            
+        * Configure IP settings as required (static or DHCP).
+            
+    * Click **Save interface** to apply the changes.
+        
+3. **Deploy the Machine:**
+    
+    * With the bridge configured, you can now deploy the machine.
+        
+    * MAAS will apply the network configuration during deployment.
+        
+
+*Note:* If you're using MAAS version 3.2 or later, the hardware sync feature ensures that manual network configurations are accurately reflected in the MAAS UI .
+
+### Configuring `br-ex` via Netplan
+
+For those who prefer manual configurations or need to script deployments, Netplan offers a straightforward method:
+
+1. **Edit the Netplan Configuration:**
+    
+    * Locate the Netplan configuration file, typically found at `/etc/netplan/01-netcfg.yaml`.
+        
+2. **Define the Bridge Configuration:**
+    
+    ```yaml
+    network:
+      version: 2
+      ethernets:
+        enp1s0:
+          dhcp4: no
+      bridges:
+        br-ex:
+          interfaces: [enp1s0]
+          dhcp4: yes
+          parameters:
+            stp: false
+            forward-delay: 0
+    ```
+    
+    * Replace `enp1s0` with the appropriate interface name if different.
+        
+    * Adjust `dhcp4` settings based on your network requirements.
+        
+3. **Apply the Configuration:**
+    
+    * Run `sudo netplan apply` to activate the new network settings.
+        
+
+*Note:* Ensure that the interface names match those recognized by your system. You can verify interface names using the `ip link` command.
+
+### Verifying the Bridge
+
+After configuration:
+
+* Use `ip a` to confirm that `br-ex` has the expected IP address.
+    
+* Run `ovs-vsctl show` to verify that `br-ex` is correctly set up as an Open vSwitch bridge.
+    
+
+By integrating the `br-ex` bridge into your MAAS-managed machines, you establish the necessary pathway for external network access, completing the network setup for your OpenStack deployment.
+
 ## Deploying OVN with Juju 🛠️
 
 Let's deploy the OVN components and integrate them with Neutron and Nova.
