@@ -8,7 +8,11 @@ tags: openstack, maas, metal-to-cloud, juju
 
 ---
 
-In Part 9, we successfully deployed OVN, establishing the Software-Defined Networking (SDN) layer for our OpenStack cloud. Our virtual machines can now communicate seamlessly; however, modern cloud infrastructures demand more than basic connectivity. Users expect advanced features such as load balancing, automated DNS management, and object storage.
+In Part 9, we successfully deployed OVN, establishing the Software-Defined Networking (SDN) layer for our OpenStack cloud.
+
+Our virtual machines can now communicate seamlessly; however, modern cloud infrastructures demand more than basic connectivity.
+
+Users expect advanced features such as load balancing, automated DNS management, and object storage.
 
 In this post, we will enhance our OpenStack environment by adding:
 
