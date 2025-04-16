@@ -8,162 +8,132 @@ tags: openstack, maas, metal-to-cloud, juju
 
 ---
 
-In Part 9, we successfully deployed OVN, establishing the Software-Defined Networking layer for our cloud.
+In Part 9, we successfully deployed OVN, establishing the Software-Defined Networking (SDN) layer for our OpenStack cloud. Our virtual machines can now communicate seamlessly; however, modern cloud infrastructures demand more than basic connectivity. Users expect advanced features such as load balancing, automated DNS management, and object storage.
 
-Virtual machines can now be connected, but modern cloud platforms offer more than just basic connectivity. Users expect higher-level services like load balancing and automated DNS.
+In this post, we will enhance our OpenStack environment by adding:
 
-In this post, we'll deploy OpenStack's solutions for these: Octavia (LBaaS) and Designate (DNSaaS). We'll also deploy the Ceph RadosGW to provide S3/Swift-compatible object storage access.
-
-## Why LBaaS and DNSaaS? 🤔
-
-* **Load Balancer as a Service (LBaaS):** Essential for distributing incoming application traffic across multiple backend VM instances. This improves application scalability (handle more load) and reliability (survive single instance failures). Octavia provides this on-demand within OpenStack.
+* **Octavia** for Load Balancer as a Service (LBaaS)
     
-* **DNS as a Service (DNSaaS):** Manually managing DNS records for cloud resources is tedious and error-prone. Designate integrates with OpenStack, allowing users (and services) to manage DNS zones and records programmatically, often automatically creating records for new VMs.
+* **Designate** for DNS as a Service (DNSaaS)
+    
+* **Ceph RadosGW** for S3/Swift-compatible Object Storage
     
 
-## Octavia: Your On-Demand Load Balancers ⚖️
+## Why LBaaS and DNSaaS?
 
-Octavia works by spinning up dedicated virtual machines (called "amphorae") that run load balancing software like HAProxy.
-
-1. **Deployment Strategy:** We'll deploy the Octavia core service HA into LXD containers on our miscellaneous/control nodes (`5,6,7`).
+* **LBaaS (Octavia)**: Load balancing distributes incoming traffic across multiple VM instances, enhancing application scalability and reliability. Octavia automates this by spinning up dedicated VMs (amphorae) running HAProxy.
     
-    ```bash
-    # Deploy Octavia API/worker services (assuming HA)
-    # Note: '--config octavia.yaml' would contain VIP etc.
-    juju deploy -n 3 --to lxd:5,lxd:6,lxd:7 --channel 2023.2/stable octavia octavia
-    
-    # Deploy MySQL Router for Octavia
-    juju deploy --channel 8.0/stable mysql-router octavia-mysql-router
-    ```
-    
-2. **Amphora Image Handling:** Octavia needs a specialized VM image (the amphora image) available in Glance. The `octavia-diskimage-retrofit` charm helps manage this.
-    
-    ```bash
-    # Deploy the retrofit charm (runs once typically)
-    juju deploy --channel 2023.2/stable octavia-diskimage-retrofit
-    # Configure the image tag (from our main config.yaml)
-    juju config octavia-diskimage-retrofit amp-image-tag=octavia-amphora
-    # Relate it to Glance (assuming a base Ubuntu image exists)
-    # NOTE: Specific base image name might be needed depending on charm version/docs.
-    # You might need manual steps to create/upload the correct base image first.
-    juju integrate octavia-diskimage-retrofit:glance glance:juju-info
-    ```
-    
-    * *Important:* Ensure a suitable base image (e.g., Ubuntu Cloud image) is in Glance for the retrofit charm to use. Check the specific charm documentation for prerequisites.
-        
-3. **Integrations:** Connect Octavia to the rest of the cloud.
-    
-    ```bash
-    # Database
-    juju integrate octavia-mysql-router:db-router mysql-innodb-cluster:db-router
-    juju integrate octavia-mysql-router:shared-db octavia:shared-db
-    # Identity
-    juju integrate octavia:identity-service keystone:identity-service
-    # Message Queue
-    juju integrate octavia:amqp rabbitmq-server:amqp
-    # Certificates
-    juju integrate octavia:certificates vault:certificates
-    # Load Balancer network connectivity (relies on Neutron)
-    juju integrate octavia:neutron neutron-api:neutron-load-balancer
-    ```
+* **DNSaaS (Designate)**: Automated DNS management simplifies handling of DNS records, integrating seamlessly with OpenStack to automatically manage DNS zones and records for your cloud resources.
     
 
-## Designate: Automated DNS Management 🗺️
+## Deploying Octavia: Reliable Load Balancers
 
-Designate provides the DNSaaS API, and typically uses a backend like BIND to serve the actual DNS requests.
+Octavia requires direct network access via bridges like `br-ex`. Hence, it should be deployed on physical machines or dedicated VMs—not LXD containers—to ensure proper network bridging.
 
-1. **Deployment Strategy:** We'll deploy the Designate API and the BIND backend. Let's deploy 2 units of each for HA into LXD containers on misc nodes (`5,6`).
-    
-    ```bash
-    # Deploy Designate API
-    # Note: '--config designate.yaml' would contain VIP, nameserver list etc.
-    juju deploy -n 2 --to lxd:5,lxd:6 --channel 2023.2/stable --config designate.yaml designate
-    
-    # Deploy Designate's MySQL Router
-    juju deploy --channel 8.0/stable mysql-router designate-mysql-router
-    
-    # Deploy BIND backend
-    juju deploy -n 2 --to lxd:5,lxd:6 --channel yoga/stable designate-bind designate-bind
-    ```
-    
-    * Note the channel for `designate-bind` might differ; check Charmhub for the version compatible with your Designate/OpenStack release.
-        
-2. **Configuration:** Ensure the designate charm is configured with the correct authoritative nameservers (this tells OpenStack which nameservers Designate manages). This comes from our `config.yaml`.
-    
-    ```bash
-    # Example from config.yaml: nameservers: ns1.example.com. ns2.example.com.
-    juju config designate nameservers='ns1.example.com. ns2.example.com.'
-    ```
-    
-3. **Integrations:** Connect Designate API, BIND, and the core services.
-    
-    ```bash
-    # Database
-    juju integrate designate-mysql-router:db-router mysql-innodb-cluster:db-router
-    juju integrate designate-mysql-router:shared-db designate:shared-db
-    # Identity
-    juju integrate designate:identity-service keystone:identity-service
-    # Message Queue
-    juju integrate designate:amqp rabbitmq-server:amqp
-    # Certificates
-    juju integrate designate:certificates vault:certificates
-    # Link API to Backend
-    juju integrate designate:dns-backend designate-bind:dns-backend
-    ```
-    
+**Deployment Strategy:**
 
-## Ceph RadosGW: S3/Swift Object Storage Gateway 💾
+```bash
+# Deploy Octavia on physical machines (assuming HA setup)
+juju deploy -n 3 --to 5,6,7 --channel 2023.2/stable octavia --config octavia.yaml
 
-While Glance uses Ceph for image storage and Cinder for block storage, we also want direct S3/Swift compatible object storage access for users and applications. Ceph RadosGW (RGW) provides this gateway.
+# Deploy MySQL Router for Octavia
+juju deploy --channel 8.0/stable mysql-router octavia-mysql-router
+```
 
-1. **Deployment:** We deploy a single instance into LXD on machine `6` as per the user command list. (For HA RGW, you'd deploy multiple units behind a load balancer like HAProxy or Keep-alived).
-    
-    ```bash
-    # Deploy RGW applying config for VIP, tenant namespaces etc.
-    # '--config ceph-rgw.yaml' contains options from main config.yaml
-    juju deploy --to lxd:6 --channel quincy/stable --config ceph-rgw.yaml ceph-radosgw
-    ```
-    
-2. **Integrations:** Connect RGW to Ceph and Keystone.
-    
-    ```bash
-    # Connect to the Ceph cluster monitors
-    juju integrate ceph-radosgw:mon ceph-mon:radosgw
-    # Connect to Keystone for S3/Swift user authentication
-    juju integrate ceph-radosgw:identity-service keystone:identity-service
-    ```
-    
-    Users can now use S3/Swift tools with their Keystone credentials to access object storage, with the data stored securely in our Ceph cluster.
-    
+### Amphora Image Preparation
 
-## Verification ✅
+Octavia requires a specialized Amphora VM image uploaded to Glance:
 
-Check the status of the newly deployed services:
+```bash
+juju deploy --channel 2023.2/stable octavia-diskimage-retrofit
+juju config octavia-diskimage-retrofit amp-image-tag=octavia-amphora
+juju integrate octavia-diskimage-retrofit:glance glance:juju-info
+```
+
+Ensure a suitable Ubuntu Cloud base image is already present in Glance.
+
+### Integrations
+
+Integrate Octavia services with core components:
+
+```bash
+juju integrate octavia-mysql-router:db-router mysql-innodb-cluster:db-router
+juju integrate octavia-mysql-router:shared-db octavia:shared-db
+juju integrate octavia:identity-service keystone:identity-service
+juju integrate octavia:amqp rabbitmq-server:amqp
+juju integrate octavia:certificates vault:certificates
+juju integrate octavia:neutron neutron-api:neutron-load-balancer
+```
+
+## Deploying Designate: Automated DNS Management
+
+Designate and its backend (BIND) can safely be deployed into LXD containers, as they don't require special networking like Octavia.
+
+```bash
+# Designate API (HA deployment)
+juju deploy -n 2 --to lxd:5,lxd:6 --channel 2023.2/stable --config designate.yaml designate
+juju deploy --channel 8.0/stable mysql-router designate-mysql-router
+
+# BIND backend for DNS
+juju deploy -n 2 --to lxd:5,lxd:6 --channel yoga/stable designate-bind
+```
+
+Configure authoritative nameservers:
+
+```bash
+juju config designate nameservers='ns1.example.com. ns2.example.com.'
+```
+
+### Integrations
+
+Integrate Designate with core OpenStack services:
+
+```bash
+juju integrate designate-mysql-router:db-router mysql-innodb-cluster:db-router
+juju integrate designate-mysql-router:shared-db designate:shared-db
+juju integrate designate:identity-service keystone:identity-service
+juju integrate designate:amqp rabbitmq-server:amqp
+juju integrate designate:certificates vault:certificates
+juju integrate designate:dns-backend designate-bind:dns-backend
+```
+
+## Deploying Ceph RadosGW: S3/Swift Object Storage Gateway
+
+Ceph RadosGW provides S3/Swift-compatible object storage and can be deployed in an LXD container (for basic or development setups). For production, consider multiple instances behind a load balancer.
+
+```bash
+juju deploy --to lxd:6 --channel quincy/stable --config ceph-rgw.yaml ceph-radosgw
+```
+
+### Integrations
+
+Connect RadosGW to Ceph and Keystone:
+
+```bash
+juju integrate ceph-radosgw:mon ceph-mon:radosgw
+juju integrate ceph-radosgw:identity-service keystone:identity-service
+```
+
+## Verification
+
+Confirm the status and health of deployed services:
 
 ```bash
 juju status octavia designate designate-bind ceph-radosgw
-```
-
-Look for active units and successful relations. You can also check if the services registered their endpoints correctly in Keystone:
-
-```bash
 juju run keystone/leader 'openstack service list'
-# Look for services like 'octavia' (load-balancer), 'designate' (dns), 'swift'/'s3' (object-store)
 ```
 
-## Conclusion ✨
+Ensure all services (`octavia`, `designate`, and `swift/s3`) appear active and integrated.
 
-Our OpenStack cloud is now significantly more powerful! We've added key "as-a-Service" components using Juju:
+## Conclusion
 
-* **Octavia** for Load Balancing
+Our OpenStack deployment now provides powerful, user-friendly "as-a-Service" functionalities:
+
+* **Octavia** for robust load balancing.
     
-* **Designate** for DNS Management
+* **Designate** for seamless automated DNS management.
     
-* **Ceph RadosGW** for S3/Swift Object Storage
+* **Ceph RadosGW** for secure and flexible object storage access.
     
 
-These services elevate the platform beyond basic IaaS, providing capabilities users expect from a modern cloud.
-
-With the infrastructure and core services largely in place, we're finally ready to interact with the cloud as a user would.
-
-In Part 11, we'll explore the Horizon dashboard, create our first networks and VMs, and see the whole system working together.
+Next, we'll explore interacting with our cloud through the Horizon dashboard, deploying our first VMs, and validating our complete setup.
