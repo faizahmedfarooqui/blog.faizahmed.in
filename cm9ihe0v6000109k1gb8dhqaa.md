@@ -79,101 +79,67 @@ graph TD
     end
 ```
 
-## 🧵 Adding `br-ex` to a MAAS-Managed Machine
+## Configuring `br-ex` Before Juju Deployment
 
-In our previous discussions, we've set up the foundational network components for our OpenStack deployment.
+To ensure seamless integration of OpenStack applications such as OVN-Chassis, it's crucial to properly configure the external bridge (`br-ex`) on your MAAS-managed machines.
 
-However, a crucial element that enables external network access for instances is the `br-ex` bridge. Let's delve into how to configure this bridge on a machine managed by MAAS.
+This step should be performed immediately after the machine is commissioned in MAAS and marked as "Ready" but **before** you deploy it via Juju.
 
-### Why `br-ex` Matters
+### ⚠️ Important Prerequisite
 
-The `br-ex` bridge serves as the gateway between your OpenStack environment and the external network. It's essential for facilitating floating IPs and ensuring that instances can communicate outside the private cloud.
+Ensure the machine status in MAAS is **"Ready" (commissioned but not yet deployed)**.
 
-### Configuring `br-ex` via the MAAS UI
+### 🧵 Step-by-Step `br-ex` Configuration in MAAS
 
-1. **Navigate to the Machine's Network Interfaces:**
+1. **Navigate to MAAS UI**:
     
-    * In the MAAS web interface, go to the **Machines** tab.
+    * Go to the **Machines** tab.
         
-    * Select the machine you wish to configure.
+    * Select your commissioned machine ready for deployment.
         
-    * Click on the **Network** tab to view its interfaces.
-        
-2. **Create the Open vSwitch Bridge:**
+2. **Access Network Interfaces**:
     
-    * Identify the physical interface connected to your external network (e.g., `enp1s0`).
+    * Click on the **Network** tab to manage interfaces.
         
-    * Click the checkbox next to this interface.
+3. **Configure the External Bridge (**`br-ex`**)**:
+    
+    * Identify the physical network interface connected to your external network (e.g., `enp1s0`).
         
-    * From the actions dropdown, select **Create bridge**.
+    * Select the checkbox next to the relevant physical interface.
         
-    * In the dialog that appears:
+    * Click on **Actions → Create bridge**.
         
-        * Set the **Bridge name** to `br-ex`.
+    * In the configuration modal:
+        
+        * Enter `br-ex` as the **Bridge name**.
             
-        * Choose **Open vSwitch** as the bridge type.
+        * Select **Open vSwitch** for the bridge type.
             
-        * Ensure the selected interface is added to the bridge.
+        * Confirm that your external physical interface (e.g., `enp1s0`) is listed and selected.
             
-        * Configure IP settings as required (static or DHCP).
+        * Configure the bridge IP addressing according to your network requirements (static IP or DHCP).
             
-    * Click **Save interface** to apply the changes.
+    * Click **Save interface**.
         
-3. **Deploy the Machine:**
+4. **Confirm Network Settings**:
     
-    * With the bridge configured, you can now deploy the machine.
+    * Verify the configuration under the Network tab. Confirm that `br-ex` is correctly associated with your physical external interface.
         
-    * MAAS will apply the network configuration during deployment.
-        
-
-*Note:* If you're using MAAS version 3.2 or later, the hardware sync feature ensures that manual network configurations are accurately reflected in the MAAS UI .
-
-### Configuring `br-ex` via Netplan
-
-For those who prefer manual configurations or need to script deployments, Netplan offers a straightforward method:
-
-1. **Edit the Netplan Configuration:**
+5. **Deploy Machine via Juju**:
     
-    * Locate the Netplan configuration file, typically found at `/etc/netplan/01-netcfg.yaml`.
-        
-2. **Define the Bridge Configuration:**
-    
-    ```yaml
-    network:
-      version: 2
-      ethernets:
-        enp1s0:
-          dhcp4: no
-      bridges:
-        br-ex:
-          interfaces: [enp1s0]
-          dhcp4: yes
-          parameters:
-            stp: false
-            forward-delay: 0
-    ```
-    
-    * Replace `enp1s0` with the appropriate interface name if different.
-        
-    * Adjust `dhcp4` settings based on your network requirements.
-        
-3. **Apply the Configuration:**
-    
-    * Run `sudo netplan apply` to activate the new network settings.
+    * With `br-ex` configured and verified, proceed to deploy the machine using Juju.
         
 
-*Note:* Ensure that the interface names match those recognized by your system. You can verify interface names using the `ip link` command.
+### ✅ Post-Deployment Verification
 
-### Verifying the Bridge
+After deploying via Juju:
 
-After configuration:
-
-* Use `ip a` to confirm that `br-ex` has the expected IP address.
+* Ensure the bridge exists: `ip a | grep br-ex`
     
-* Run `ovs-vsctl show` to verify that `br-ex` is correctly set up as an Open vSwitch bridge.
+* Check Open vSwitch bridge: `ovs-vsctl show`
     
 
-By integrating the `br-ex` bridge into your MAAS-managed machines, you establish the necessary pathway for external network access, completing the network setup for your OpenStack deployment.
+This proactive approach guarantees the availability of `br-ex` for Juju-managed OpenStack services such as Octavia, simplifying network setup and ensuring reliable external connectivity.
 
 ## Deploying OVN with Juju 🛠️
 
