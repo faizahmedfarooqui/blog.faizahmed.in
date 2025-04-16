@@ -4,7 +4,7 @@ datePublished: Tue Apr 15 2025 12:30:50 GMT+0000 (Coordinated Universal Time)
 cuid: cm9ihe0v6000109k1gb8dhqaa
 slug: part-9-weaving-the-virtual-network-fabric
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/ZiQkhI7417A/upload/3f96beb0aa4d4f5653f411461d7c84b5.jpeg
-tags: openstack, maas, metal-to-cloud, juju
+tags: openstack, maas, metal-to-cloud, juju, ovn-chassis, br-ex
 
 ---
 
