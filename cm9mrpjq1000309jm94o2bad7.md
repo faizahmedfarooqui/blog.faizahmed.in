@@ -8,7 +8,11 @@ tags: openstack, maas, metal-to-cloud, juju
 
 ---
 
-In Part 11, we successfully interacted with our newly built cloud via the Horizon dashboard, launching a VM and validating the core compute, storage, and networking functionality. Our cloud *works*! But how do we know if it's *healthy*? How do we track resource usage? How are sensitive secrets managed? This is where the OpenStack Telemetry stack and services like Barbican come in.
+In Part 11, we successfully interacted with our newly built cloud via the Horizon dashboard, launching a VM and validating the core compute, storage, and networking functionality.
+
+Our cloud *works*! But how do we know if it's *healthy*? How do we track resource usage? How are sensitive secrets managed?
+
+This is where the OpenStack Telemetry stack and services like Barbican come in.
 
 ## Why Monitor Your Cloud? 👀
 
@@ -215,6 +219,10 @@ juju run gnocchi/leader 'openstack metric list'
 
 ## Conclusion 🔭
 
-Our cloud is now equipped with a comprehensive telemetry stack (Ceilometer, Gnocchi, Aodh) providing vital monitoring and alarming capabilities, along with Watcher for potential optimization. We also revisited Barbican's role in securing secrets, backed by Vault. This significantly enhances the operational visibility and maturity of our platform.
+Our cloud is now equipped with a comprehensive telemetry stack (Ceilometer, Gnocchi, Aodh) providing vital monitoring and alarming capabilities, along with Watcher for potential optimization. We also revisited Barbican's role in securing secrets, backed by Vault.
 
-With the infrastructure, core services, networking, and monitoring in place, what's next? In Part 13, we'll demonstrate the *real* payoff by deploying complex applications, like a Kubernetes cluster, onto our newly built OpenStack cloud using Juju.
+This significantly enhances the operational visibility and maturity of our platform.
+
+With the infrastructure, core services, networking, and monitoring in place, what's next?
+
+In Part 13, we'll demonstrate the *real* payoff by deploying complex applications, like a Kubernetes cluster, onto our newly built OpenStack cloud using Juju.
