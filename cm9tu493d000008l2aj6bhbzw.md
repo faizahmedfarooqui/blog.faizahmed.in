@@ -3,7 +3,7 @@ title: "Killing Your App with .map()? Here’s the Modern Fix"
 datePublished: Wed Apr 23 2025 11:12:37 GMT+0000 (Coordinated Universal Time)
 cuid: cm9tu493d000008l2aj6bhbzw
 slug: killing-your-app-with-map-heres-the-modern-fix
-cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/g5jpH62pwes/upload/947f5bda6860911e5199fabb7230262e.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5Xwaj9gaR0g/upload/8f7ec98af8c7fd2d81d33dc59121603b.jpeg
 tags: javascript, nodejs, array, garbagecollection, arraymap, gc-pressure
 
 ---
