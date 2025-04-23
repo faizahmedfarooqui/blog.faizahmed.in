@@ -155,7 +155,7 @@ const results = await processPromises(uploadPromises, { batchSize: 50 });
 | **Instead of** | **Use this** |
 | --- | --- |
 | `const result =`[`largeArray.map`](http://hugeArray.map)`(fn);` | `for (const item of lazyMap(largeArray, fn)) { ... }` |
-| `const result = await Promise.all(`[`largeArray.map`](http://hugeArray.map)`(asyncFn));` | `for await (const item of lazyMapAsync(hugeArray, asyncFn)) { ... }` |
+| `const result = await Promise.all(`[`largeArray.map`](http://hugeArray.map)`(asyncFn));` | `for await (const item of lazyMapAsync(largeArray, asyncFn)) { ... }` |
 | `await Promise.all(promises)` | `await processPromises(promises, { batchSize: 10 });` |
 
 ## Final Thoughts
