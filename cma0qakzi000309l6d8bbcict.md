@@ -2,7 +2,7 @@
 title: "Tame the Stream: Handling Backpressure in Node.js Like a Pro"
 datePublished: Mon Apr 28 2025 06:59:57 GMT+0000 (Coordinated Universal Time)
 cuid: cma0qakzi000309l6d8bbcict
-slug: tame-the-stream-handling-backpressure-in-nodejs-like-a-pro
+slug: handling-backpressure-in-nodejs
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/6hTRXxfUZZE/upload/eb062ceddd7c0be2379ac88a7db034a7.jpeg
 tags: nodejs, streams, streams-in-nodejs, backpressure, backpressure-in-nodejs, streams-backpressure
 
