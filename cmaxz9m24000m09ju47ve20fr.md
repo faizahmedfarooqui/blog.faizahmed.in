@@ -3,7 +3,7 @@ title: "Memory Leaks and Garbage Collection in Node.js: What Developers Get Wron
 datePublished: Wed May 21 2025 13:27:32 GMT+0000 (Coordinated Universal Time)
 cuid: cmaxz9m24000m09ju47ve20fr
 slug: memory-leaks-and-garbage-collection-in-nodejs
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1747833939302/c3670615-1aef-49c2-ba7f-f824857e18ad.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1747834295149/d2434d4c-9eb5-429c-b161-53849131baac.png
 tags: javascript, web-development, nodejs, debugging, performance-optimization, memory-management, v8-engine, devtip, garbagecollection, backend-engineering
 
 ---
