@@ -149,7 +149,7 @@ function store(key, value) {
 Example using `lru-cache`:
 
 ```javascript
-jsCopyEditconst LRU = require('lru-cache');
+const LRU = require('lru-cache');
 const cache = new LRU({ max: 1000 }); // only stores 1000 items
 ```
 
