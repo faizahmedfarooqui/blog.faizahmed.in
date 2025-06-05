@@ -1,5 +1,5 @@
 ---
-title: "Part 9: Weaving the Virtual Network Fabric"
+title: "Metal to Cloud – Part 9: Weaving the Virtual Network Fabric"
 datePublished: Tue Apr 15 2025 12:30:50 GMT+0000 (Coordinated Universal Time)
 cuid: cm9ihe0v6000109k1gb8dhqaa
 slug: part-9-weaving-the-virtual-network-fabric
