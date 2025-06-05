@@ -1,5 +1,5 @@
 ---
-title: "Part 12: Keeping Watch"
+title: "Metal to Cloud – Part 12: Keeping Watch"
 datePublished: Fri Apr 18 2025 12:30:48 GMT+0000 (Coordinated Universal Time)
 cuid: cm9mrpjq1000309jm94o2bad7
 slug: part-12-keeping-watch
