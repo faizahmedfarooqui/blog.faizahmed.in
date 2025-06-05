@@ -1,5 +1,5 @@
 ---
-title: "Part 3: MaaS Setup"
+title: "Metal to Cloud – Part 3: MaaS Setup"
 datePublished: Wed Apr 09 2025 12:30:16 GMT+0000 (Coordinated Universal Time)
 cuid: cm99wq74d000s09l7fw6wemxs
 slug: part-3-maas-setup
