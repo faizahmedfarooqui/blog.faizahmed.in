@@ -1,8 +1,8 @@
 ---
-title: "Part 11: Access and Interaction"
+title: "Metal to Cloud – Part 11: Access and Interaction"
 datePublished: Thu Apr 17 2025 12:30:11 GMT+0000 (Coordinated Universal Time)
 cuid: cm9lc8ws500010akz5wgzad0e
-slug: part-11-access-and-interaction
+slug: metal-to-cloud-part-11-access-and-interaction
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/744oGeqpxPQ/upload/0c48a70cc62e57e0731b3e8572727c5e.jpeg
 tags: openstack, maas, metal-to-cloud, juju
 
