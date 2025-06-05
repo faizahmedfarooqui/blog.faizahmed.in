@@ -1,5 +1,5 @@
 ---
-title: "Part 2: The Cloud Blueprint"
+title: "Metal to Cloud – Part 2: The Cloud Blueprint"
 datePublished: Tue Apr 08 2025 12:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: cm972fson000709jugqt8f9gy
 slug: part-2-the-cloud-blueprint
