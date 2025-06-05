@@ -1,5 +1,5 @@
 ---
-title: "Part 10: Adding Network Superpowers"
+title: "Metal to Cloud – Part 10: Adding Network Superpowers"
 datePublished: Wed Apr 16 2025 12:30:17 GMT+0000 (Coordinated Universal Time)
 cuid: cm9jwt6k3002x09jo68aqfyq7
 slug: part-10-adding-network-superpowers
