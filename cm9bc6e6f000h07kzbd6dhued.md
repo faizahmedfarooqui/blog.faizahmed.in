@@ -1,5 +1,5 @@
 ---
-title: "Part 4: Taming the Tin"
+title: "Metal to Cloud – Part 4: Taming the Tin"
 datePublished: Thu Apr 10 2025 12:30:32 GMT+0000 (Coordinated Universal Time)
 cuid: cm9bc6e6f000h07kzbd6dhued
 slug: part-4-taming-the-tin
