@@ -1,5 +1,5 @@
 ---
-title: "Part 1: Beyond Public Cloud"
+title: "Metal to Cloud – Part 1: Beyond Public Cloud"
 datePublished: Mon Apr 07 2025 12:30:46 GMT+0000 (Coordinated Universal Time)
 cuid: cm971v4qf000t0ajp29yeemgp
 slug: part-1-beyond-public-cloud
