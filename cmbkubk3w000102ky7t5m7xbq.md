@@ -8,6 +8,8 @@ tags: express, authentication, security, nodejs, backend, jwt, devtips, websecur
 
 ---
 
+In this post, we’ll explore what replay attacks are, how JWS and JWE differ, and how to generate + validate session fingerprints using Node.js to stop these attacks in real-time.
+
 ## What is a Replay Attack?
 
 A **replay attack** occurs when an attacker **captures a valid token** and **reuses it** to impersonate a user, even though the token is technically still valid and signed.
