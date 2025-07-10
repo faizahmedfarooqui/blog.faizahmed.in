@@ -167,30 +167,7 @@ Then:
 
 ## Packaging Workflow
 
-```mermaid
-flowchart TD
-  A[Write Source Code]:::start --> B[Build with tsup or rollup]:::process
-  B --> C1[index.cjs - CommonJS Build]:::cjs
-  B --> C2[index.esm.js - ESM Build]:::esm
-  B --> C3[index.d.ts - Type Declarations]:::types
-
-  C1 --> D[Set 'main' field in package.json]:::config
-  C2 --> E[Set 'module' field in package.json]:::config
-  C1 & C2 --> F[Define 'exports' map]:::config
-
-  F --> G[Test with ESM and CJS consumers]:::test
-  G --> H[Publish to npm]:::publish
-
-  %% Styling
-  classDef start fill:#E3FCEC,stroke:#34D399,stroke-width:2px,color:#065F46;
-  classDef process fill:#DBEAFE,stroke:#6366F1,stroke-width:2px,color:#1E3A8A;
-  classDef cjs fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#78350F;
-  classDef esm fill:#BFDBFE,stroke:#3B82F6,stroke-width:2px,color:#1E40AF;
-  classDef types fill:#E9D5FF,stroke:#8B5CF6,stroke-width:2px,color:#4C1D95;
-  classDef config fill:#F3F4F6,stroke:#6B7280,stroke-width:2px,color:#111827;
-  classDef test fill:#FDE68A,stroke:#CA8A04,stroke-width:2px,color:#92400E;
-  classDef publish fill:#E0F2FE,stroke:#0EA5E9,stroke-width:2px,color:#0369A1;
-```
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1752130833999/29da699e-9728-42ec-b90d-9bdbcb65874f.png align="center")
 
 ## Summary: Ship Libraries That Just Work
 
