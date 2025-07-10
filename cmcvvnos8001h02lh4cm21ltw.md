@@ -8,8 +8,6 @@ tags: javascript, opensource, nodejs, devtools, webdev, npm, typescript, commonj
 
 ---
 
-*This blog gives us —-- pending!*
-
 ## Why Packaging Still Breaks in 2025?
 
 Despite being two decades into Node.js, **publishing a library that works across CommonJS (CJS), ECMAScript Modules (ESM), TypeScript, and bundlers is still confusing**.
