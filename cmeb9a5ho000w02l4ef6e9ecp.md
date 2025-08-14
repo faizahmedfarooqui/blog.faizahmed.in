@@ -53,73 +53,13 @@ In this post, we’ll break these frameworks down into **actionable development 
 * Secure key management & rotation
     
 
-### **3\. Overlaps & Differences (Mermaid Diagram)**
+### **3\. Overlaps & Differences**
 
-```mermaid
-flowchart TB
-    COPPA["COPPA<br/>(Children's Data Privacy)"]
-    HIPAA["HIPAA<br/>(Healthcare/PHI Security)"]
-    PCI["PCI DSS<br/>(Cardholder Data Security)"]
-
-    COPPA_HIPAA["Overlap:<br/>Privacy by Design · RBAC · Consent Logging"]
-    HIPAA_PCI["Overlap:<br/>Strong Crypto (TLS 1.2+/1.3, AES-256) · Key Mgmt"]
-    COPPA_PCI["Overlap:<br/>Data Minimization · Limited Retention"]
-    ALL["Common Ground:<br/>Secure Storage · Access Control · Auditability · Breach Notification"]
-
-    COPPA --- HIPAA
-    HIPAA --- PCI
-    COPPA --- PCI
-
-    COPPA --> COPPA_HIPAA
-    HIPAA --> COPPA_HIPAA
-
-    HIPAA --> HIPAA_PCI
-    PCI --> HIPAA_PCI
-
-    COPPA --> COPPA_PCI
-    PCI --> COPPA_PCI
-
-    COPPA_HIPAA --> ALL
-    HIPAA_PCI --> ALL
-    COPPA_PCI --> ALL
-
-    classDef coppa fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#0D47A1;
-    classDef hipaa fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px,color:#4A148C;
-    classDef pci fill:#E0F2F1,stroke:#00897B,stroke-width:2px,color:#004D40;
-    classDef overlap fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px,color:#E65100;
-    classDef all fill:#FFFDE7,stroke:#FDD835,stroke-width:3px,color:#F57F17;
-
-    class COPPA coppa;
-    class HIPAA hipaa;
-    class PCI pci;
-    class COPPA_HIPAA overlap;
-    class HIPAA_PCI overlap;
-    class COPPA_PCI overlap;
-    class ALL all;
-```
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1755167451316/6e8a10c9-bb1f-41f9-9c7b-726a80fc9165.png align="center")
 
 ### **4\. The “Hardening Path” for Compliant Data Flows**
 
-```mermaid
-flowchart LR
-    A[Ingress - App API SDK] --> B[Classify Data - Child PHI Card]
-    B --> C[Consent and Policy Gate]
-    C --> D[Encrypt in Transit TLS 1.2 or 1.3]
-    D --> E[Broker or Tokenize - Gateway KMS HSM Enclave]
-    E --> F[Secure Storage - Encryption at Rest Rotation Least Privilege]
-    F --> G[Access Enforcement - RBAC ABAC JIT Break Glass]
-    G --> H[Monitoring and Audit - Immutable Logs Alerts]
-    H --> I[Retention and Deletion - TTL Legal Holds DSAR]
-
-    %% Edge labels (short + ASCII only)
-    A -- No secret leakage in SDK --> B
-    C -- Deny if consent missing --> D
-    E -- Tokenize PAN Encrypt PHI --> F
-
-    %% Simple palette
-    classDef step fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#0D47A1;
-    class A,B,C,D,E,F,G,H,I step;
-```
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1755167654862/9710ed77-85f0-4f6c-83f3-7230613ca212.png align="center")
 
 ## **Let’s wrap up…**
 
