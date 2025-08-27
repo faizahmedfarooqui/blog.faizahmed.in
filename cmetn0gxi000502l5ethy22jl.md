@@ -47,26 +47,7 @@ Payment pages must be continuously monitored for unauthorized script or header c
 
 Here's a focused diagram that maps the sequence of protections needed around payment forms:
 
-```mermaid
-flowchart TB
-    A[Load Payment Page] --> B[Script Inventory Check]
-    B --> C[Script Authorization Whitelist]
-    C --> D[Integrity Verification CSP SRI]
-    D --> E[Tamper Detection Real Time]
-    E --> F[Alert Block Incident Workflow]
-
-    A -- no secret leakage in sdk --> B
-    C -- deny if missing authorization --> D
-    D -- block unexpected scripts --> E
-
-    %% node colors (older 'style' syntax = widely supported)
-    style A fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#0D47A1
-    style B fill:#FFF8E1,stroke:#FB8C00,stroke-width:2px,color:#E65100
-    style C fill:#E0F2F1,stroke:#00897B,stroke-width:2px,color:#004D40
-    style D fill:#E8EAF6,stroke:#3949AB,stroke-width:2px,color:#1A237E
-    style E fill:#FCE4EC,stroke:#D81B60,stroke-width:2px,color:#880E4F
-    style F fill:#FFF
-```
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1756278809075/3e8ff2e8-5d39-4dc5-946d-4c395e4ee2c0.png align="center")
 
 ## Implementation Techniques & Tools
 
