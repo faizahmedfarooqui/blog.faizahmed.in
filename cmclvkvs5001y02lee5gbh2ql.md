@@ -3,6 +3,7 @@ title: "A Practical Guide to AWS API Gateway"
 datePublished: Wed Jul 02 2025 11:30:30 GMT+0000 (Coordinated Universal Time)
 cuid: cmclvkvs5001y02lee5gbh2ql
 slug: aws-api-gateway
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1756648000304/43d50a3e-74a9-4aa1-bd79-3bb46c6b9323.png
 tags: lambda, aws, devops, serverless, api-gateway, cloud-architecture, scalablesolutions, vpc-link
 
 ---
