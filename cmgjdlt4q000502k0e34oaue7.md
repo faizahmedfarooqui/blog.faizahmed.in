@@ -234,7 +234,7 @@ sequenceDiagram
     ENC-->>EC2: Return only the necessary result via vsock
 ```
 
-The mermaid diagram is actually not showcasing the sequences, please the below syntax in [mermaid.live](https://mermaid.live/) website to preview the above diagram in detail.
+The mermaid diagram is actually not showcasing the sequences, please copy+paste the below content in [mermaid.live](https://mermaid.live/)’s website to preview the above diagram in detail.
 
 ```plaintext
 sequenceDiagram
