@@ -4,7 +4,6 @@ datePublished: Thu Aug 14 2025 10:28:00 GMT+0000 (Coordinated Universal Time)
 cuid: cmeb9a5ho000w02l4ef6e9ecp
 slug: coppa-vs-hipaa-vs-pci-dss
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/veNb0DDegzE/upload/368652cc590f1cc66b7062c3480c3ec4.jpeg
-tags: aws, architecture, pci-dss, hipaa, compliance, backend-developments, cloud-security, coppa
 
 ---
 
