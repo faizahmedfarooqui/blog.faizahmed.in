@@ -4,7 +4,8 @@ datePublished: Fri Nov 07 2025 07:03:11 GMT+0000 (Coordinated Universal Time)
 cuid: cmhoie5qt000002k051q17ckl
 slug: your-nodejs-aws-sdk-v3-app-will-crash-in-production-without-this-maxsockets-fix
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/a_PDPUPuNZ8/upload/ee651a69c3559a8b3fd8cab765bd4518.jpeg
-tags: aws, nodejs, production, aws-sdk, maxsockets
+tags: maxsockets, aws, nodejs, aws-sdk, production
+series: scaling-javascript-nodejs
 
 ---
 

@@ -4,7 +4,8 @@ datePublished: Wed Nov 16 2022 06:08:44 GMT+0000 (Coordinated Universal Time)
 cuid: claj8t5w7000l08mn14wnc3ne
 slug: how-much-do-you-know-traefik-proxy
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/9SKhDFnw4c4/upload/v1668579645748/JHn3zR6RA.jpeg
-tags: reverse-proxy, cloud-native, traefik
+tags: traefik, cloud-native, reverse-proxy
+series: treafik
 
 ---
 

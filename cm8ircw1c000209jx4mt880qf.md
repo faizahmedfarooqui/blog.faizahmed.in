@@ -4,7 +4,8 @@ datePublished: Fri Mar 21 2025 12:30:10 GMT+0000 (Coordinated Universal Time)
 cuid: cm8ircw1c000209jx4mt880qf
 slug: how-digital-signatures-ensure-data-integrity
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/P1qyEf1g0HU/upload/5b831a3013f223a2e42554897d67a7a4.jpeg
-tags: digital-signature, integrity, signature-verification
+tags: digital-signature, signature-verification, integrity
+series: encryption
 
 ---
 

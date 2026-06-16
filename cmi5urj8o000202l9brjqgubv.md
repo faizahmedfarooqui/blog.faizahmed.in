@@ -4,7 +4,8 @@ datePublished: Wed Nov 19 2025 10:21:36 GMT+0000 (Coordinated Universal Time)
 cuid: cmi5urj8o000202l9brjqgubv
 slug: handling-bigint-in-javascript-what-happens-when-you-dont
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/Wpnoqo2plFA/upload/ecb06740aba4a5b128d7f57788131790.jpeg
-tags: javascript, ieee-754, javascript-bigint, javascript-number-limits, js-number-vs-bigint, safe-integer-javascript
+tags: javascript-number-limits, js-number-vs-bigint, safe-integer-javascript, javascript, javascript-bigint, ieee-754
+series: null
 
 ---
 

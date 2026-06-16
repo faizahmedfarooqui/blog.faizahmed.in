@@ -4,7 +4,8 @@ datePublished: Wed Mar 26 2025 12:30:46 GMT+0000 (Coordinated Universal Time)
 cuid: cm8pwkwyl000g09jv0b0765au
 slug: homomorphic-encryption-performing-computations-on-encrypted-data
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/lD1nt9ePX0s/upload/14101e36e38356648c9162048092aef5.jpeg
-tags: encryption, homomorphic-encryption, computation-on-encryption
+tags: computation-on-encryption, homomorphic-encryption, encryption
+series: encryption
 
 ---
 

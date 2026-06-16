@@ -5,6 +5,7 @@ cuid: cl4ciqu680cwxq2nvdktegto6
 slug: microservices-and-cloud-native
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/wsHwYxu-rkc/upload/v1655040370048/M4t8rZJOh.jpeg
 tags: microservices, design-patterns, cloud-native
+series: microservices-design-patterns
 
 ---
 

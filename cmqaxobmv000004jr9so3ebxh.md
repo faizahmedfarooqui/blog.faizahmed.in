@@ -5,6 +5,7 @@ cuid: cmqaxobmv000004jr9so3ebxh
 slug: secret-keystore-cli-encrypt-env-aws-kms
 cover: https://cdn.hashnode.com/uploads/covers/5fe08e581485f22e24b3799d/fc41c65a-5ca4-46a5-8db8-48d6e8f4190d.jpg
 tags: aws, security, nodejs, backend, devops
+series: encryption
 
 ---
 

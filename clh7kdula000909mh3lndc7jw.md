@@ -1,11 +1,11 @@
 ---
 title: "Managing Multiple Packages with npm Workspaces"
-seoTitle: "Understanding NPM Workspaces"
 datePublished: Wed May 03 2023 10:37:27 GMT+0000 (Coordinated Universal Time)
 cuid: clh7kdula000909mh3lndc7jw
 slug: npm-workspaces
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/oZMUrWFHOB4/upload/02a058b38783f16a1ec1860152f433b4.jpeg
-tags: npm, monorepo, workspaces, npm-workspaces, shared-components
+tags: npm, workspaces, monorepo, npm-workspaces, shared-components
+series: scaling-javascript-nodejs
 
 ---
 

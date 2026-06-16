@@ -4,7 +4,8 @@ datePublished: Thu May 01 2025 07:47:13 GMT+0000 (Coordinated Universal Time)
 cuid: cma52axmg000009if26je6md4
 slug: offset-vs-cursor-vs-keyset-pagination
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/dsvJgiBJTOs/upload/4290081b9c76036b46bec8c47c8fc671.jpeg
-tags: nodejs, software-architecture, webdev, scalability, pagination, api-design, backend-engineering
+tags: backend-engineering, api-design, pagination, nodejs, webdev, scalability, software-architecture
+series: scaling-javascript-nodejs
 
 ---
 

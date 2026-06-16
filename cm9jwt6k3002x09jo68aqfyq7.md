@@ -4,7 +4,8 @@ datePublished: Wed Apr 16 2025 12:30:17 GMT+0000 (Coordinated Universal Time)
 cuid: cm9jwt6k3002x09jo68aqfyq7
 slug: part-10-adding-network-superpowers
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/Y7GUOQ83OMg/upload/3a599ce4759646e2a14841eabee29333.jpeg
-tags: openstack, maas, metal-to-cloud, juju
+tags: metal-to-cloud, maas, openstack, juju
+series: metal-to-cloud
 
 ---
 

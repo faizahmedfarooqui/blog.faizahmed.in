@@ -5,7 +5,8 @@ cuid: ckqf0tbph0jy3gss1037z8772
 slug: ga-wdio
 canonical: https://medium.com/@faizahmedfarooqui/ga-wdio-automation-tool-for-all-7d3819c274a5
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1624786460706/13Z36wLuw.png
-tags: automation, testing, webdriver, testing-library
+tags: testing, webdriver, testing-library, automation
+series: null
 
 ---
 

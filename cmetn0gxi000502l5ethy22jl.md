@@ -4,7 +4,8 @@ datePublished: Wed Aug 27 2025 07:12:15 GMT+0000 (Coordinated Universal Time)
 cuid: cmetn0gxi000502l5ethy22jl
 slug: pci-dss-40-client-side-attack-vectors-and-what-developers-must-do
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/Q59HmzK38eQ/upload/86d9a9e0669eda19d193527b95dd528c.jpeg
-tags: devops, pci-dss, payments, compliance, websecurity, devsecurity
+tags: devsecurity, pci-dss, websecurity, payments, compliance, devops
+series: null
 
 ---
 

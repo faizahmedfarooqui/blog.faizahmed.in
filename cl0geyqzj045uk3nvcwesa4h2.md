@@ -4,7 +4,8 @@ datePublished: Sat Feb 05 2022 07:58:57 GMT+0000 (Coordinated Universal Time)
 cuid: cl0geyqzj045uk3nvcwesa4h2
 slug: high-level-design
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/eYwn81sPkJ8/upload/v1646637990027/V4bgYHKC5.jpeg
-tags: architecture, software-engineering, design-and-architecture
+tags: architecture, design-and-architecture, software-engineering
+series: null
 
 ---
 

@@ -5,6 +5,7 @@ cuid: cmfi6qhbn000p02l14cthcp98
 slug: trends-shaping-the-future-of-fintech
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/91AQt9p4Mo8/upload/c624f3185e910b374b8b9b1b3ea865a9.jpeg
 tags: fintech, credit-union
+series: fintech
 
 ---
 

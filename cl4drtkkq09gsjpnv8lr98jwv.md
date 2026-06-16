@@ -5,6 +5,7 @@ cuid: cl4drtkkq09gsjpnv8lr98jwv
 slug: decomposition-patterns-in-microservices
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/5P-uRLTCKHM/upload/v1655040456901/y6Gj9a1hX.jpeg
 tags: microservices, patterns, decomposition-patterns
+series: microservices-design-patterns
 
 ---
 

@@ -5,6 +5,7 @@ cuid: cmo1dxp29007a2dnn97r6gkpk
 slug: why-your-background-jobs-are-lying
 cover: https://cdn.hashnode.com/uploads/covers/5fe08e581485f22e24b3799d/eff685dd-f658-4feb-946a-7ab7e6db4e92.png
 tags: background-jobs, distributed-systems, system-design, backend-engineering, queue-systems, nestjs, nodejs, idempotency, reliability-engineering, async-processing
+series: scaling-javascript-nodejs
 
 ---
 

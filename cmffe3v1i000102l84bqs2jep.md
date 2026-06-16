@@ -5,6 +5,7 @@ cuid: cmffe3v1i000102l84bqs2jep
 slug: fintech-fundamentals-every-engineering-leader-should-know-2025-edition
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/k0Jo8m6DO6k/upload/a844f0e72b00ea55cb4981c5a4bd7781.jpeg
 tags: fintech, payments, credit-union
+series: fintech
 
 ---
 

@@ -4,7 +4,8 @@ datePublished: Tue Mar 18 2025 12:30:35 GMT+0000 (Coordinated Universal Time)
 cuid: cm8eh1v8y003q07jrb7fcgc6s
 slug: hashing-vs-encryption-whats-the-difference
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/o7bTIZ7j-iw/upload/4d2183a33a2112cccff1eaf0a831963e.jpeg
-tags: encryption, hashing, hashing-vs-encryption
+tags: hashing, encryption, hashing-vs-encryption
+series: encryption
 
 ---
 

@@ -4,7 +4,8 @@ datePublished: Thu Mar 27 2025 12:30:46 GMT+0000 (Coordinated Universal Time)
 cuid: cm8rc0roh004m09i8hbcub226
 slug: jwt-jwe-and-jwks-explained-a-developers-guide-to-token-based-security
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1743062631113/655da8d9-6711-431d-85e4-192ef42a21d9.png
-tags: security, jwt, token, jwks, jwe
+tags: jwt, jwe, jwks, token, security
+series: encryption
 
 ---
 

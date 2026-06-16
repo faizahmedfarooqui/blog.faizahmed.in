@@ -5,6 +5,7 @@ cuid: cmfgw5vtg000i02js3th8hrng
 slug: apis-security-and-compliance-the-technical-backbone-of-fintech
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/tg7xChYyE08/upload/d9724f798cacf2a7e5026ac5364eb136.jpeg
 tags: fintech, credit-union
+series: fintech
 
 ---
 

@@ -4,7 +4,8 @@ datePublished: Fri Apr 11 2025 12:30:34 GMT+0000 (Coordinated Universal Time)
 cuid: cm9crma89000309k1ahreap6r
 slug: metal-to-cloud-part-5-enter-juju
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/9li36FlPayg/upload/d31502399b7ed673e67e5aed6ca133f9.jpeg
-tags: openstack, maas, metal-to-cloud, juju
+tags: metal-to-cloud, juju, openstack, maas
+series: metal-to-cloud
 
 ---
 

@@ -4,7 +4,8 @@ datePublished: Mon Jun 23 2025 11:30:29 GMT+0000 (Coordinated Universal Time)
 cuid: cmc90m6vr000r02lee7gp246y
 slug: jwt-vs-paseto-vs-session-based-auth
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1750668593912/035f96c2-493e-4566-a338-4a69f2fea743.png
-tags: authentication, nodejs, backend, oauth, jwt, devtips, access-control, websecurity, paseto, auth-architecture
+tags: auth-architecture, websecurity, nodejs, authentication, paseto, jwt, backend, devtips, oauth, access-control
+series: scaling-javascript-nodejs
 
 ---
 

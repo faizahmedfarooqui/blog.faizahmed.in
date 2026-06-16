@@ -4,7 +4,8 @@ datePublished: Sat Jul 03 2021 17:19:55 GMT+0000 (Coordinated Universal Time)
 cuid: ckqo16j7j0k5vs2s150fvaztz
 slug: jamstack-cloudflare-pages
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1625329933833/NGTEwFmpu.png
-tags: cloudflare, hosting, deployment, web-hosting, jamstack
+tags: jamstack, cloudflare, deployment, web-hosting, hosting
+series: null
 
 ---
 

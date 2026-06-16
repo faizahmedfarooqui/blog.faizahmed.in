@@ -4,7 +4,8 @@ datePublished: Wed May 21 2025 13:27:32 GMT+0000 (Coordinated Universal Time)
 cuid: cmaxz9m24000m09ju47ve20fr
 slug: memory-leaks-and-garbage-collection-in-nodejs
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1747834295149/d2434d4c-9eb5-429c-b161-53849131baac.png
-tags: javascript, web-development, nodejs, debugging, performance-optimization, memory-management, v8-engine, devtip, garbagecollection, backend-engineering
+tags: nodejs, javascript, memory-management, garbagecollection, web-development, backend-engineering, performance-optimization, debugging, v8-engine, devtip
+series: scaling-javascript-nodejs
 
 ---
 

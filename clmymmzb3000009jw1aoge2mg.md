@@ -5,6 +5,7 @@ cuid: clmymmzb3000009jw1aoge2mg
 slug: open-vswitch-configure
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/ZiQkhI7417A/upload/2872af768a92d267b033f484f42b1d13.jpeg
 tags: linux, networking, openvswitch, ovs
+series: vcw
 
 ---
 

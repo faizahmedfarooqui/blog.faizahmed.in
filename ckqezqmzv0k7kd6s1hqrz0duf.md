@@ -1,14 +1,12 @@
 ---
 title: "Understanding Express Typescript"
-seoTitle: "Express Typescript"
-seoDescription: "A full-stack web framework built using ExpressJS, TypeScript & MongoDB."
 datePublished: Sun Jan 12 2020 18:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: ckqezqmzv0k7kd6s1hqrz0duf
 slug: express-typescript
 canonical: https://medium.com/@faizahmedfarooqui/boilerplate-using-express-typescript-e15bd4afcb96
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1624783885522/83P-q9O7c.png
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1624786086084/M60B289zN.png
-tags: express, mongodb, nodejs, boilerplate, typescript
+tags: nodejs, express, typescript, mongodb, boilerplate
+series: scaling-javascript-nodejs
 
 ---
 

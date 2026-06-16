@@ -4,7 +4,8 @@ datePublished: Sun Apr 20 2025 12:30:17 GMT+0000 (Coordinated Universal Time)
 cuid: cm9pmkl9a000108i942m3fccy
 slug: metal-to-cloud-part-14-day-2-and-beyond
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5QaD2yY-pTI/upload/d698b14b42d8ab0fd6bf3410a2655ef9.jpeg
-tags: openstack, maas, metal-to-cloud, juju
+tags: openstack, metal-to-cloud, maas, juju
+series: metal-to-cloud
 
 ---
 

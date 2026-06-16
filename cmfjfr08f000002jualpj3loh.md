@@ -5,6 +5,7 @@ cuid: cmfjfr08f000002jualpj3loh
 slug: leading-fintech-teams-balancing-speed-security-and-compliance
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/EkyuhD7uwSM/upload/46d62ecf073a39b3ea617a64ded4e280.jpeg
 tags: fintech, payments, credit-union
+series: fintech
 
 ---
 

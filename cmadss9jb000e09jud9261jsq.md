@@ -4,7 +4,8 @@ datePublished: Wed May 07 2025 10:30:41 GMT+0000 (Coordinated Universal Time)
 cuid: cmadss9jb000e09jud9261jsq
 slug: streaming-huge-json-in-nodejs
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/cVGQ7SvGyoM/upload/ca7b943d6a54b0de49db0f6422f7c7ec.jpeg
-tags: web-performance, javascript, json, nodejs, software-engineering, devtips, backend-development, memory-management, streamingdata, scalablearchitecture
+tags: nodejs, javascript, web-performance, backend-development, streamingdata, memory-management, json, scalablearchitecture, software-engineering, devtips
+series: scaling-javascript-nodejs
 
 ---
 

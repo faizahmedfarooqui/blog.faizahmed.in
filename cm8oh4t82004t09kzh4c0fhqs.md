@@ -4,7 +4,8 @@ datePublished: Tue Mar 25 2025 12:30:34 GMT+0000 (Coordinated Universal Time)
 cuid: cm8oh4t82004t09kzh4c0fhqs
 slug: zero-trust-encryption-a-security-first-approach
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/qRHYfGunO6s/upload/69e8ddafe169f9d411f38d701b233a58.jpeg
-tags: encryption, zero-trust-encryption
+tags: zero-trust-encryption, encryption
+series: encryption
 
 ---
 

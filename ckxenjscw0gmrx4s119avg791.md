@@ -4,7 +4,8 @@ datePublished: Tue Jun 19 2018 18:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: ckxenjscw0gmrx4s119avg791
 slug: whats-nodejs
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1640003075370/mmjXAl5s1.png
-tags: introduction, nodejs
+tags: nodejs, introduction
+series: scaling-javascript-nodejs
 
 ---
 

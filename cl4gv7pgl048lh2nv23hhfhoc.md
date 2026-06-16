@@ -5,6 +5,7 @@ cuid: cl4gv7pgl048lh2nv23hhfhoc
 slug: operational-patterns-in-microservices
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/iYkqHp5cGQ4/upload/v1655374422509/AQE9eCG9U.jpeg
 tags: microservices, design-patterns, operational
+series: microservices-design-patterns
 
 ---
 

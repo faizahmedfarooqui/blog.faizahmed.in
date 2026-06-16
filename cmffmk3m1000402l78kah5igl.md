@@ -5,6 +5,7 @@ cuid: cmffmk3m1000402l78kah5igl
 slug: core-pillars-of-fintech-payments-lending-wealth-and-beyond
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/8lnbXtxFGZw/upload/ec483005289feba5fd50b7f43e4566a4.jpeg
 tags: fintech, payments, credit-union
+series: fintech
 
 ---
 

@@ -5,6 +5,7 @@ cuid: cl4engky302ay0vnvgacwa4w1
 slug: data-patterns-in-microservices
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/Q1p7bh3SHj8/upload/v1655240498656/jbdmy_pWe.jpeg
 tags: microservices, design-patterns, data-patterns
+series: microservices-design-patterns
 
 ---
 

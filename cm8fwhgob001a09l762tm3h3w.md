@@ -4,7 +4,8 @@ datePublished: Wed Mar 19 2025 12:30:23 GMT+0000 (Coordinated Universal Time)
 cuid: cm8fwhgob001a09l762tm3h3w
 slug: aes-vs-rsa-encryption
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wr4CnlEg_5s/upload/e0449ad9665bbd35c5c93e3296df3d1b.jpeg
-tags: aes, rsa-encryption, aes-encryption, rsa
+tags: aes, aes-encryption, rsa, rsa-encryption
+series: encryption
 
 ---
 

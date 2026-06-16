@@ -4,7 +4,8 @@ datePublished: Thu Oct 12 2023 18:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: clnwsy6wu000g08mn6k8v6vxw
 slug: getting-started-with-qemu
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/GtYFwFrFbMA/upload/ee3d19152894842a9b2283dbe9a69c1c.jpeg
-tags: cloud, virtual-machine, linux, virtualization, qemu
+tags: qemu, virtual-machine, virtualization, linux, cloud
+series: vcw
 
 ---
 

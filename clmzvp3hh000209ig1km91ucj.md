@@ -5,6 +5,7 @@ cuid: clmzvp3hh000209ig1km91ucj
 slug: microvm-firecracker-firectl
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1695642068759/a59007a8-d011-4025-9514-ddf427ab25cd.png
 tags: aws, microvm, firecracker, firectl
+series: vcw
 
 ---
 

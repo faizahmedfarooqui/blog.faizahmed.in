@@ -4,7 +4,8 @@ datePublished: Sat Mar 22 2025 12:30:11 GMT+0000 (Coordinated Universal Time)
 cuid: cm8k6srga000a09jjc5tvhvec
 slug: jwt-signing-and-encryption-securing-api-tokens
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1742659012231/31ccf075-9b25-457e-8b45-f922ebfcf4c4.png
-tags: jwt, hmac, rsa, jwe
+tags: jwt, jwe, hmac, rsa
+series: encryption
 
 ---
 

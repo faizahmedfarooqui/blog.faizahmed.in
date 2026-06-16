@@ -4,7 +4,8 @@ datePublished: Sun Mar 23 2025 12:30:38 GMT+0000 (Coordinated Universal Time)
 cuid: cm8lm96wu000809lag5zq3wgt
 slug: end-to-end-encryption-e2ee-in-messaging-apps
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/U4OQtFxJM5c/upload/e0e61fb890d672040f183b4ceb67da98.jpeg
-tags: encryption, messaging, end-to-end-encryption, e2ee
+tags: e2ee, end-to-end-encryption, messaging, encryption
+series: encryption
 
 ---
 

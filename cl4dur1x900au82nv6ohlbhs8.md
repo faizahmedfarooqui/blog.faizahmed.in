@@ -5,6 +5,7 @@ cuid: cl4dur1x900au82nv6ohlbhs8
 slug: integration-patterns-in-microservices
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/M5tzZtFCOfs/upload/v1655111338744/9HuYdqp_61.jpeg
 tags: microservices, design-patterns, integration-patterns
+series: microservices-design-patterns
 
 ---
 

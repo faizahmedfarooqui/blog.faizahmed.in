@@ -5,6 +5,7 @@ cuid: cl88q0sj801oqv6nvdz522meo
 slug: sql-stored-procedures-vs-functions
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/J8oncaYH6ag/upload/v1663589071139/TmRHx2oGq.jpeg
 tags: postgresql, functions, stored-procedure
+series: null
 
 ---
 

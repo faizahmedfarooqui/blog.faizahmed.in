@@ -4,7 +4,8 @@ datePublished: Sat Oct 14 2023 18:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: clnwswqor000a09l07nid4hki
 slug: unlocking-the-power-of-qemu
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/4Ykxp_t4i08/upload/6c3e7e9d0b016613fd8c52d8d28d6b26.jpeg
-tags: virtual-machine, linux, cloud-computing, devops, qemu
+tags: cloud-computing, virtual-machine, linux, devops, qemu
+series: vcw
 
 ---
 

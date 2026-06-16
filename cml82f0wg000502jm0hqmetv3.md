@@ -4,7 +4,8 @@ datePublished: Wed Feb 04 2026 13:30:28 GMT+0000 (Coordinated Universal Time)
 cuid: cml82f0wg000502jm0hqmetv3
 slug: scaling-the-boring-stuff-sending-10-million-notifications-with-a-simple-nodejs-job-worker
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/7nrsVjvALnA/upload/3c22bc2db7624af12c57c0d9cf946f10.jpeg
-tags: nodejs, scalability, system-design, distributed-systems, backend-engineering
+tags: nodejs, system-design, scalability, backend-engineering, distributed-systems
+series: null
 
 ---
 

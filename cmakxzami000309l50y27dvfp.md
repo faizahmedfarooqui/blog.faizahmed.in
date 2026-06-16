@@ -4,7 +4,8 @@ datePublished: Mon May 12 2025 10:30:31 GMT+0000 (Coordinated Universal Time)
 cuid: cmakxzami000309l50y27dvfp
 slug: understanding-mse-and-eme
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1747040277628/8e47d87c-66c9-4202-83ac-df03fe83de51.png
-tags: web-development, streaming, video-streaming, streamingtech, media-source-extension, encrypted-media-extension, mediasourceextensions, encryptedmediaextensions
+tags: media-source-extension, encrypted-media-extension, mediasourceextensions, encryptedmediaextensions, streaming, web-development, streamingtech, video-streaming
+series: null
 
 ---
 

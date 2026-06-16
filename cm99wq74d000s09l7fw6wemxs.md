@@ -4,7 +4,8 @@ datePublished: Wed Apr 09 2025 12:30:16 GMT+0000 (Coordinated Universal Time)
 cuid: cm99wq74d000s09l7fw6wemxs
 slug: part-3-maas-setup
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/0Pz4h4_O3PU/upload/96260b284d5ee7db2dbbf8736671cc72.jpeg
-tags: openstack, maas, metal-to-cloud, juju
+tags: maas, openstack, metal-to-cloud, juju
+series: metal-to-cloud
 
 ---
 

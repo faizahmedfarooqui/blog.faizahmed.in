@@ -4,7 +4,8 @@ datePublished: Tue Nov 29 2022 03:30:44 GMT+0000 (Coordinated Universal Time)
 cuid: clb1nw2b701c2iynvh24q4ipl
 slug: traefik-postgres-pgadmin
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/fyeOxvYvIyY/upload/v1669664571989/uJXRpmS4C.jpeg
-tags: postgresql, docker, docker-compose, traefik, pgadmin
+tags: traefik, postgresql, pgadmin, docker, docker-compose
+series: treafik
 
 ---
 

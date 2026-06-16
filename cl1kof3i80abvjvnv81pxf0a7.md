@@ -1,11 +1,11 @@
 ---
 title: "Understanding HLD & LLD"
-seoTitle: "Understanding HLD & LLD"
 datePublished: Mon Mar 07 2022 12:14:21 GMT+0000 (Coordinated Universal Time)
 cuid: cl1kof3i80abvjvnv81pxf0a7
 slug: hld-and-lld
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/ml4he3xUYFg/upload/v1649074451254/MLABSkAeC.jpeg
 tags: design-patterns
+series: null
 
 ---
 

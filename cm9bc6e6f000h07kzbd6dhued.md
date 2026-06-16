@@ -4,7 +4,8 @@ datePublished: Thu Apr 10 2025 12:30:32 GMT+0000 (Coordinated Universal Time)
 cuid: cm9bc6e6f000h07kzbd6dhued
 slug: part-4-taming-the-tin
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/nZvTEtAc024/upload/79076244d680840a16a71d6eb8e8a26b.jpeg
-tags: openstack, maas, metal-to-cloud, juju
+tags: metal-to-cloud, openstack, maas, juju
+series: metal-to-cloud
 
 ---
 

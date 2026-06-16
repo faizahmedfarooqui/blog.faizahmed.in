@@ -4,7 +4,8 @@ datePublished: Mon Apr 28 2025 06:59:57 GMT+0000 (Coordinated Universal Time)
 cuid: cma0qakzi000309l6d8bbcict
 slug: handling-backpressure-in-nodejs
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/6hTRXxfUZZE/upload/eb062ceddd7c0be2379ac88a7db034a7.jpeg
-tags: nodejs, streams, streams-in-nodejs, backpressure, backpressure-in-nodejs, streams-backpressure
+tags: backpressure-in-nodejs, streams-backpressure, backpressure, nodejs, streams-in-nodejs, streams
+series: scaling-javascript-nodejs
 
 ---
 

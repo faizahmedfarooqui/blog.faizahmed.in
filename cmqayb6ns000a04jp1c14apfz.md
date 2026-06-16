@@ -5,6 +5,7 @@ cuid: cmqayb6ns000a04jp1c14apfz
 slug: secret-keystore-runtime-config-loader-nodejs
 cover: https://cdn.hashnode.com/uploads/covers/5fe08e581485f22e24b3799d/6febd24c-cb45-4d6c-8f64-f859c8dd71b6.jpg
 tags: aws, nodejs, security, devops, backend
+series: encryption
 
 ---
 

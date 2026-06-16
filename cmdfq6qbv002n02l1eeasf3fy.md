@@ -5,6 +5,7 @@ cuid: cmdfq6qbv002n02l1eeasf3fy
 slug: master-docker-compose-cicd
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/HSACbYjZsqQ/upload/6998f2d5998e3826cbec21201bb895fd.jpeg
 tags: postgresql, software-development, docker, nodejs, webdev, devops, containers, cicd, phpmyadmin, docker-compose, ci-cd, github-actions-1, backend-engineering
+series: vcw
 
 ---
 
@@ -271,13 +272,13 @@ services:
 ### Key Options —
 
 * **build**: Context for Dockerfile
-    
+
 * **ports**: Map host:container ports
-    
+
 * **environment**: Inject ENV vars
-    
+
 * **volumes**: Sync host and container files
-    
+
 
 ## Real-World Docker Compose Examples
 
@@ -337,7 +338,7 @@ services:
       - "8080:80"
 
 volumes:
-  mysql_data:    
+  mysql_data:
 ```
 
 ## Useful Commands

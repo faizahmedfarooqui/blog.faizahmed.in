@@ -4,7 +4,8 @@ datePublished: Mon Apr 07 2025 12:30:46 GMT+0000 (Coordinated Universal Time)
 cuid: cm971v4qf000t0ajp29yeemgp
 slug: part-1-beyond-public-cloud
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/kWd5ER2XpSg/upload/aee14fbbf92760a8f5fccaabe7e62a9b.jpeg
-tags: openstack, data-center, maas, metal-to-cloud, juju
+tags: metal-to-cloud, juju, maas, openstack, data-center
+series: metal-to-cloud
 
 ---
 

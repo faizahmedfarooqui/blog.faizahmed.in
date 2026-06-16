@@ -4,7 +4,8 @@ datePublished: Fri Apr 18 2025 12:30:48 GMT+0000 (Coordinated Universal Time)
 cuid: cm9mrpjq1000309jm94o2bad7
 slug: part-12-keeping-watch
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wJOeJ7HwwB8/upload/f0414a2c5d4fe75fdf8dd546db82261d.jpeg
-tags: openstack, maas, metal-to-cloud, juju
+tags: openstack, metal-to-cloud, maas, juju
+series: metal-to-cloud
 
 ---
 

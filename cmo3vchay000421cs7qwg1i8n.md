@@ -5,6 +5,7 @@ cuid: cmo3vchay000421cs7qwg1i8n
 slug: why-retries-are-not-a-fix
 cover: https://cdn.hashnode.com/uploads/covers/5fe08e581485f22e24b3799d/0778e4df-30a7-49c0-9d61-f94159f345cb.png
 tags: distributed-systems, system-design, background-jobs, nodejs, nestjs, queue
+series: scaling-javascript-nodejs
 
 ---
 

@@ -4,7 +4,8 @@ datePublished: Fri Oct 13 2023 18:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: clnwsue7i000f0ala31yx7c8o
 slug: creating-a-microvm-with-qemu
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/EGXpSrG02sU/upload/fc86e77cf540715e74e2335713399f50.jpeg
-tags: cloud, virtual-machine, linux, cloud-computing, qemu
+tags: qemu, cloud, virtual-machine, cloud-computing, linux
+series: vcw
 
 ---
 

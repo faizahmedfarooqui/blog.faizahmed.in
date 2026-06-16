@@ -4,7 +4,8 @@ datePublished: Fri Nov 18 2022 08:12:41 GMT+0000 (Coordinated Universal Time)
 cuid: clam84a0e001j08mn3tkx8low
 slug: traefik-docker-compose
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/OKOOGO578eo/upload/v1668759249179/2xwm0vt3y.jpeg
-tags: docker, reverse-proxy, cloud-native, docker-compose, traefik
+tags: traefik, reverse-proxy, cloud-native, docker, docker-compose
+series: treafik
 
 ---
 

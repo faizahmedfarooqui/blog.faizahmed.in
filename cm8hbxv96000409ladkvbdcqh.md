@@ -4,7 +4,8 @@ datePublished: Thu Mar 20 2025 12:30:49 GMT+0000 (Coordinated Universal Time)
 cuid: cm8hbxv96000409ladkvbdcqh
 slug: how-tlsssl-encryption-protects-the-internet
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/YOyZVglvuQ8/upload/1e4f52612f6a798407437a61edbf79ce.jpeg
-tags: ssl, encryption, tls, tls-encryption
+tags: tls-encryption, tls, ssl, encryption
+series: encryption
 
 ---
 

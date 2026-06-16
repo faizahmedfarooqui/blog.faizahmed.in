@@ -4,7 +4,8 @@ datePublished: Tue Apr 08 2025 12:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: cm972fson000709jugqt8f9gy
 slug: part-2-the-cloud-blueprint
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/_hpk_92Crhs/upload/78be26152bcc030e9aad229e3241013b.jpeg
-tags: network, hardware, openstack, maas, metal-to-cloud, juju, cloud-blueprint
+tags: cloud-blueprint, hardware, network, metal-to-cloud, openstack, maas, juju
+series: metal-to-cloud
 
 ---
 

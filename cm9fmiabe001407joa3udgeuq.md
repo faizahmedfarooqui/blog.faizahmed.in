@@ -4,7 +4,8 @@ datePublished: Sun Apr 13 2025 12:30:48 GMT+0000 (Coordinated Universal Time)
 cuid: cm9fmiabe001407joa3udgeuq
 slug: metal-to-cloud-part-7-building-resilient-storage-with-juju
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/Q1p7bh3SHj8/upload/758f4b4e27d6129ac49e0fbf0dcd99f6.jpeg
-tags: openstack, ceph, maas, metal-to-cloud, juju
+tags: openstack, metal-to-cloud, juju, maas, ceph
+series: metal-to-cloud
 
 ---
 

@@ -5,7 +5,8 @@ cuid: ckqjqly3404xza6s13uftai4z
 slug: what-is-jamstack
 canonical: https://jamstack.org/resources/
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1625073040340/p3p5vI6EV.jpeg
-tags: markdown, jamstack
+tags: jamstack, markdown
+series: null
 
 ---
 

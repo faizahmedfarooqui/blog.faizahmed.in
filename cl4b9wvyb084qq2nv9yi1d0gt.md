@@ -4,7 +4,8 @@ datePublished: Sun Jun 12 2022 12:19:14 GMT+0000 (Coordinated Universal Time)
 cuid: cl4b9wvyb084qq2nv9yi1d0gt
 slug: jargon-of-microservices
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/lCzhcwXv85U/upload/v1655036297090/NCGIHqaMc.jpeg
-tags: jargon, microservices, design-patterns
+tags: microservices, design-patterns, jargon
+series: microservices-design-patterns
 
 ---
 

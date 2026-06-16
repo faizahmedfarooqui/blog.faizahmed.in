@@ -5,7 +5,8 @@ cuid: ckqenvvwg0htqd6s15dn73oku
 slug: nodejs-without-npm
 canonical: https://medium.com/@faizahmedfarooqui/node-framework-without-using-npm-6910087a106a
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1624806352515/SzZMHvRMY.jpeg
-tags: web-development, nodejs, apis, npm, rest-api
+tags: nodejs, npm, web-development, apis, rest-api
+series: scaling-javascript-nodejs
 
 ---
 

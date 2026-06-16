@@ -5,6 +5,7 @@ cuid: cmqauim6l000104i8chx4ddxo
 slug: nodejs-secrets-threat-model-aws-kms
 cover: https://cdn.hashnode.com/uploads/covers/5fe08e581485f22e24b3799d/013db0eb-035d-4e5e-b4df-4f840418cef8.jpg
 tags: security, aws, nodejs, backend, devops
+series: encryption
 
 ---
 
