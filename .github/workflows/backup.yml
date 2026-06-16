@@ -1,0 +1,49 @@
+name: Backup blog posts
+
+# Re-creates the Hashnode Git backup that became a paid feature.
+# Scrapes the published site (no Hashnode Pro / API token needed) and commits
+# any new or changed posts as <cuid>.md files at the repo root.
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # daily at 03:00 UTC
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+concurrency:
+  group: blog-backup
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: backup/package-lock.json
+
+      - name: Install dependencies
+        working-directory: backup
+        run: npm ci
+
+      - name: Install Chromium
+        working-directory: backup
+        run: npx playwright install --with-deps chromium
+
+      - name: Run backup (incremental, commits per post)
+        working-directory: backup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          node backup.mjs --incremental --commit
+
+      - name: Push changes
+        run: git push

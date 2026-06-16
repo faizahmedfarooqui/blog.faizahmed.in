@@ -1,0 +1,13 @@
+{
+  "name": "@faizahmedfarooqui/blog-backup",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backup tooling for blog.faizahmed.in (scrapes published posts into <cuid>.md files)",
+  "scripts": {
+    "backup": "node backup.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.61.0"
+  }
+}
