@@ -63,10 +63,14 @@ use `--commit` to mirror Hashnode's per-post commit style.
 
 ## Notes / limitations
 
+- Frontmatter includes a `series:` line with the post's Hashnode series slug, or
+  `null` if it isn't part of a series. A `Part N` in a title does **not** imply a
+  series — only the per-post `series` field is authoritative (e.g. the
+  "metal-to-cloud" posts are grouped by title but not by a Hashnode series).
 - A post counts as changed when its Markdown body, title, cover, canonical URL,
-  publish date, or **set** of tags differs. Tag *order* is ignored — the old
-  Hashnode backups happened to order tags differently than the live site does
-  now, and rewriting all of them for that would be pure noise.
+  publish date, series, or **set** of tags differs. Tag *order* is ignored — the
+  old Hashnode backups happened to order tags differently than the live site
+  does now, and rewriting all of them for that would be pure noise.
 - If a post is unpublished/deleted on Hashnode, its `<cuid>.md` is left in place
   (the script never deletes backups).
 - When a post is genuinely rewritten, its tags are emitted in the live site's

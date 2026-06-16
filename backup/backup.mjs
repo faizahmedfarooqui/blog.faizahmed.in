@@ -19,6 +19,7 @@
 //   node backup.mjs --commit        # after writing, make per-post git commits
 //   node backup.mjs --only <slug>   # sync a single slug (repeatable)
 //   node backup.mjs --limit <n>     # cap number of posts (debugging)
+//   node backup.mjs --delay <ms>    # ms between fetches (default 1500; raise for full syncs)
 //
 // Incremental mode keeps backup/state.json (slug -> last-seen sitemap lastmod).
 // It fetches a post only when it is new or its lastmod changed, and seeds posts
@@ -44,7 +45,7 @@ const NON_POST_SLUGS = new Set(['archive', 'recommendations', 'newsletter', 'ser
 // ----- CLI args ---------------------------------------------------------------
 const argv = process.argv.slice(2);
 const flags = {
-  dryRun: false, commit: false, incremental: false, limit: Infinity, only: [],
+  dryRun: false, commit: false, incremental: false, limit: Infinity, delay: 1500, only: [],
 };
 for (let i = 0; i < argv.length; i++) {
   const a = argv[i];
@@ -52,6 +53,7 @@ for (let i = 0; i < argv.length; i++) {
   else if (a === '--commit') flags.commit = true;
   else if (a === '--incremental') flags.incremental = true;
   else if (a === '--limit') flags.limit = Number.parseInt(argv[++i], 10);
+  else if (a === '--delay') flags.delay = Number.parseInt(argv[++i], 10);
   else if (a === '--only') flags.only.push(argv[++i]);
 }
 
@@ -84,6 +86,7 @@ function renderFile(post, markdown) {
   if (post.tags && post.tags.length) {
     lines.push(`tags: ${post.tags.map((t) => t.slug).join(', ')}`);
   }
+  lines.push(`series: ${post.series ? post.series.slug : 'null'}`);
   return `${lines.join('\n')}\n\n---\n\n${markdown}`;
 }
 
@@ -332,7 +335,7 @@ function loadState() {
   let failed = [];
   for (const slug of slugs) {
     if (!(await processSlug(slug))) failed.push(slug);
-    await sleep(1500); // pace requests to stay under Vercel's rate limit
+    await sleep(flags.delay); // pace requests to stay under Vercel's rate limit
   }
 
   // Second pass for stragglers (transient rate-limit / late chunk), gentler pace.
